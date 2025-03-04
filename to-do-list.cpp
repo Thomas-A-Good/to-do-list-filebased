@@ -8,20 +8,20 @@ void userIn()
     std::cout << "Would you like to add(a), show(s), or remove(r) from your list: ";
     if(userReturn == 'a')
     {
-        addlist();
+        addlist(fileName);
     }
     if(userReturn == 's')
     {
-        showList();
+        showList(fileName);
     }
     if(userReturn == 'r')
     {
-        removeList();
+        removeList(fileName);
     }
     else
     {
         std::cout << "Incorrect Input \n";
-        return userIn();
+        return userIn(fileName);
     }
 
 }
@@ -29,12 +29,13 @@ void userIn()
 void addlist()
 {
 
+
 }
 
 void showList()
 {
     std::string line;
-    while(std::getline(thisFile, line))
+    while()
     {
         std::cout << line << "\n";
     }
@@ -47,7 +48,8 @@ void removeList()
 
 int main()
 {
-    std::ofstream thisFile("ToDoFile.txt", std::ios::out);
+    const std::string fileName = "ToDoFile.txt";
+    std::ofstream thisFile(fileName, std::ios::out);
     if(thisFile.is_open())
     {
         userIn();
