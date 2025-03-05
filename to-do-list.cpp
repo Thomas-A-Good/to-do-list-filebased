@@ -2,6 +2,10 @@
 #include <fstream>
 #include <string>
 
+void addlist(std::string);
+void showList(std::string);
+void removeList(std::string);
+
 void userIn(std::string fileName)
 {
     char userReturn;
