@@ -28,7 +28,22 @@ void userIn()
 
 void addlist()
 {
+    while(stop != "n")
+    {
+        //Get the item or task the user wants to add to the list
+        cout << "What would you like to add? " << endl;
+        getline(cin, item);
+        
+        cout << item << endl;
 
+        //Check if they want to stop
+        cout << "Would you like to add an item to your To Do List (y / n): ";
+        cin >> stop;
+        
+        //clears the buffer
+        cin.ignore();
+
+    }
 
 }
 
