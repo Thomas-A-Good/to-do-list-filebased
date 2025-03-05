@@ -34,7 +34,7 @@ void addlist(std:: string fileName)
     while(stop != "n")
     {
         //Get the item or task the user wants to add to the list
-        std:: cout << "What would you like to add? " << endl;
+        std:: cout << "What would you like to add? " << std::endl;
         std::getline(std:: cin, item);
 
         //append the file with the new item
@@ -52,7 +52,7 @@ void addlist(std:: string fileName)
 }
 
 
-void showList()
+void showList(std::string fileName)
 {
     std::string line;
     //while()
