@@ -46,7 +46,7 @@ void addlist(std:: string fileName)
         thisFile << item;
 
         //Check if they want to stop
-        std::cout << "Would you like to add an item to your To Do List (y / n): ";
+        std::cout << "Would you like to add another item to your To Do List (y / n): ";
         std::cin >> stop;
         
         //clears the buffer
