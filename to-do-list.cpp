@@ -52,15 +52,15 @@ void addlist(std:: string fileName)
 void showList()
 {
     std::string line;
-    while()
-    {
-        std::cout << line << "\n";
-    }
+    //while()
+    //{
+    //    std::cout << line << "\n";
+    //}
 }
 
-void removeList()
+void removeList(std::string fileName)
 {
-
+    std::cout << "remove";
 }
 
 int main()
