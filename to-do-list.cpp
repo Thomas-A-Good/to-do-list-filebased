@@ -43,6 +43,7 @@ void addlist(std:: string fileName)
 
         //append the file with the new item
         std::ofstream thisFile(fileName, std::ios::app);
+        thisFile << item;
 
         //Check if they want to stop
         std::cout << "Would you like to add an item to your To Do List (y / n): ";
@@ -73,6 +74,7 @@ void removeList(std::string fileName)
 int main()
 {
     const std::string fileName = "ToDoFile.txt";
+    addlist(fileName);
     return 0;
 }
 
