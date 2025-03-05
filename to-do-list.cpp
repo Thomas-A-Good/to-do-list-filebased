@@ -2,7 +2,7 @@
 #include <fstream>
 #include <string>
 
-void userIn()
+void userIn(std::string fileName)
 {
     char userReturn;
     std::cout << "Would you like to add(a), show(s), or remove(r) from your list: ";
@@ -10,11 +10,11 @@ void userIn()
     {
         addlist(fileName);
     }
-    if(userReturn == 's')
+    else if(userReturn == 's')
     {
         showList(fileName);
     }
-    if(userReturn == 'r')
+    else if(userReturn == 'r')
     {
         removeList(fileName);
     }
@@ -64,18 +64,6 @@ void removeList()
 int main()
 {
     const std::string fileName = "ToDoFile.txt";
-    std::ofstream thisFile(fileName, std::ios::out);
-    if(thisFile.is_open())
-    {
-        userIn();
-
-        thisFile.close();
-
-    }
-    else
-    {
-        std::cout << "Error opening";
-    }
     return 0;
 }
 
